@@ -2,8 +2,7 @@
 const categoryService = require('../services/categoryService');
 
 exports.findAll = (req, res, next) => {
-    const title = req.query.title;
-    categoryService.getAll()
+    categoryService.getAll(req)
         .then(data => res.json(data))
 
 };
