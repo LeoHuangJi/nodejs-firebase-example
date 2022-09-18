@@ -1,0 +1,13 @@
+  {
+    "type": "service_account",
+    "project_id": "shopli-app-02",
+    "private_key_id": "7ba43ebdd1c82ac0006f7d087ce99cf37130ce7f",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDaQSvBgplAG0ic\nozQ7EDCEc9+PfbaqDsHb9PuHL8lbwE3Bz80mg5omz1mHpngvlp8EOnHMJn1hWfh7\nPE5jai6wR8bbS9LflMKVhEieINWLwJILrDKlAhgYXoaqS31FUX8hygxlsgF1uoxx\nukR3HedNqUUM+mOIDzd24hP/jW76Opo+UrGkZdtrDpe3MMT25i+mGuNBqlvPyOSj\nOYdCB+EA5vMBXUIiUQtWVW2CyquBxnPiQQccBuZgId2UJvwC55oDjljJg2RPrchs\nhKRADy92W8yxJHeSWNj3bOZz6Awz4/729wXIk2mVwJytVosF1CYy52qZqZCxrvAQ\n9/YU/slLAgMBAAECggEAY7AMulBaiytrGRB6VNfqMTVz0WiMPFSNO1hEYtTy1dOa\nMIInpAXMLRncPNdOYf4cF6RSQfr6nbKoijFbZJElTiMasyOI59JcpkpLmN5Ka5DD\npE08vJ2eP9M9Ex9z0muM8/QDgZeyjwFsEK4Rg47HDXPZNDpRp927abONitYg8G1n\nrBkv3IQewVptxK39MEiDc93fqdADICDubk5c+fWgvPqFxmTjbwu7Q8zfWR+3w4xu\nC0VdfIxCxQuXxmx72PuTisnkxKuJD8D2tIDKPLBr80shS5x0y1LeLq8pYsB8TvEz\nMEWXWvCjtJAtyYg0LhJoXvsULca9owz8v3sgyUSNwQKBgQD6ECR21IDaR+wFL3VX\nGSDpG59SbNV2x5H6VclE7FgGhFsu0okOhCIlVFF6K1/26WSIG4P41KjFFseYAqL1\nnmkWlJY2hKeDVIBswqcvaKwbKOV3No8Mt6A9ciW43M74ggz329zYZSpX4tRmuJVX\nnQ0baJEQTgbmQHFrinmCwyZm2wKBgQDfb7Mlxr5ww67VyrtT4e3zqtmKb+KEzVdO\nVb6Rl+AZRWzV2ATZBFqzLYtw4xTVlB8zXECQcXap1ghIqgYikWF7oXurcMwYB2Ox\nyck3OBJtVTfl73Wd9sIJQ/8d+YjGqW3IrgEfaNmB282Ojw14qYeDVF+qJemekuEN\ntwUX3BIaUQKBgQCLB3COlMVzFuu1UlaF71Wp5Q6mkBX6rSiPKyT06gZi0TG1DZ7f\n8Dzfzkpihz0alVasicfND8cplOmxrT2XG9THliMR+pz72n5weaTkKekOTKWPq0jL\nREiWASHR7wovhnbZU2cs9MofBOEcn2GAzbOc2n1UuF0DpS6qINpABmoSYwKBgQCD\ncHlJur2jJmo+WFGUye6qDhKFDsaJayZ17Zj6mwZ4t0+MCNTpOVeF2kASO3OxJL6p\n/xX4Itc0l7Ut0d9kDHP1P4y50NQvOoGaP+M/uZuVd7E3cYOWVmfU/YwhfP7KJzdu\n+3WrnYl+i+hDecHp/oi6aDMSq9TftPXxlH3JiGuZ0QKBgGsvFD1u7sKInyjBfCvx\nq6FYUMZpKIkMk5WfOG0rMjf2VY/4QyJy7uKvtTTTEwuYJtkJMkSUhin3EloLxBWr\n1+P/ZU67+Wm6zytZpUlE4ZaHOEIFf+jCqI8NjQRRr+JWyz01VSiawJCeaWd/bbgG\nwU9xE2ECIE15pNopryFHSfps\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-gobnh@shopli-app-02.iam.gserviceaccount.com",
+    "client_id": "101609117225352826539",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-gobnh%40shopli-app-02.iam.gserviceaccount.com"
+  }
+  
