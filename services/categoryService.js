@@ -7,59 +7,17 @@ const { status } = require("../common/constant");
 
 const responseData = require("../common/responseData");
 
-const getAll2 = async (req, res) => {
+const list = async (req, res) => {
+    const name = req.query.name;
     try {
-        const category = await db.collection('category').get();
-
-        const data = category.docs.map((doc) => ({
-            id: doc.id,
-            ...doc.data(),
-        }));
-
-        return responseData(responseCode.ok, true, message.ok, data);
-    } catch (error) {
-        logger.error(`${req.method} - ${req.originalUrl} - ${error.message}`);
-        return responseData(responseCode.error, false, error.message, null)
-
-    }
-
-
-}
-const getAll = async (req, res) => {
-    const name = typeof(req.query.name)!='undefined'?req.query.name:null;
-console.log(name)
-    try {
-        let categoryQuery = await db.collection('category').where('name', '==', name|| null).get();
+        let categoryQuery = await db.collection('category')
+      
+        .get();
         const data = categoryQuery.docs.map((doc) => ({
             id: doc.id,
             ...doc.data(),
         }));
 
-
-
-        // const category = await db.collection('category').get();
-
-        // const category = await db.ref('category')
-        //     .orderByChild("customer/email")
-        //     .equalTo('Iphone');
-
-        //const category = await db.ref("category").orderByChild("location").equalsTo('')
-
-        //   var ref = db.ref("category");
-        // ref.orderByChild("height").startAt(3).on("child_added", function (snapshot) {
-        //     console.log(snapshot.key)
-        // });
-        // const querySnapshot = await db.collectionGroup('category').where('type', '==', 'museum').get();
-        // querySnapshot.forEach((doc) => {
-        //   console.log(doc.id, ' => ', doc.data());
-        // });
-
-
-        // const data = querySnapshot.map((doc) => ({
-        //     id: doc.id,
-        //     ...doc.data(),
-        // }));
-
         return responseData(responseCode.ok, true, message.ok, data);
     } catch (error) {
         logger.error(`${req.method} - ${req.originalUrl} - ${error.message}`);
@@ -69,9 +27,6 @@ console.log(name)
 
 
 }
-
-
-
 
 const create = async (req, res) => {
 
@@ -87,6 +42,31 @@ const create = async (req, res) => {
             return responseData(responseCode.badRequest, true, message.badRequest, null);
         params.id = category.id;
         return responseData(responseCode.created, true, message.created, params)
+
+    } catch (error) {
+        logger.error(`${req.method} - ${req.originalUrl} - ${error.message}`);
+        return responseData(responseCode.error, false, error.message, null)
+    }
+}
+
+const update = async (req, res) => {
+
+    try {
+
+        const { id, name, description, thumb, status } = req.body;
+
+        const params = {
+            name, description, thumb, status
+        };
+
+        const category = await db.collection('category').doc(id);
+        await category.update(params);
+        const updated = await category.get();
+
+        if (!updated.exists) {
+            return responseData(responseCode.notFound, false, message.notFound, null)
+        }
+        return responseData(responseCode.ok, true, message.ok, updated.data())
 
     } catch (error) {
         logger.error(`${req.method} - ${req.originalUrl} - ${error.message}`);
@@ -147,5 +127,5 @@ const _delete = async (req, res) => {
 
 
 module.exports = {
-    getAll, create, findOne, delete: _delete, remove
+    list, create, update, findOne, delete: _delete, remove
 };

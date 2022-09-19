@@ -1,14 +1,19 @@
 
 const categoryService = require('../services/categoryService');
 
-exports.findAll = (req, res, next) => {
-    categoryService.getAll(req)
+exports.list = (req, res, next) => {
+    categoryService.list(req)
         .then(data => res.json(data))
 
 };
 
 exports.create = (req, res) => {
     categoryService.create(req, res)
+        .then(data => res.json(data))
+
+};
+exports.update = (req, res) => {
+    categoryService.update(req, res)
         .then(data => res.json(data))
 
 };

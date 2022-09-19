@@ -7,11 +7,7 @@ if (!fs.existsSync(path.join(__dirname, '..', 'logs'))) {
      fsPromises.mkdir(path.join(__dirname, '..', 'logs'));
 }
 
-// log4js.addAppender(log4js.appenders.console());
 const date = new Date();
-
-
-let logName =`logs/${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}.log`;
 log4js.configure({
     appenders: {
       //  file: { type: 'file', filename: path.join(__dirname, logName), }  ,
