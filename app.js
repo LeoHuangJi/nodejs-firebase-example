@@ -62,6 +62,8 @@ app.get("/", (req, res) => {
 
 //require("./routes/programming.routers")(app);
 require("./routes/category.routers")(app);
+require("./routes/zoom.routers")(app);
+
 
 
 
